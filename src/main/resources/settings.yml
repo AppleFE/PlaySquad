@@ -1,0 +1,30 @@
+token: your_token_here
+# Streamer's nickname ({player} = streamer)
+streamer: Angrihyung
+
+# List of players not applicable to {all_players}, {random_player}
+whitelist:
+  - "mario"
+  - "pikachu"
+
+# Key = donation amount, value = commands to be executed with console privileges
+# Placeholder:
+# {player} = streamer's nickname
+# {all_players} = all online players
+# {random_player} = random player from all online players
+donation_settings:
+  "10":
+    - command: "kill {player}"
+      probability: 0.1
+    - command: "give {player} diamond 1"
+      probability: 0.4
+    - command: "lightning {player}"
+      probability: 0.5
+
+  "11~50":
+    - command: "tppos {player} 0 100 0"
+      probability: 1.0
+    - command: "custom command input {all_players}"
+      probability: 1.0
+    - command: "kill {random_player}"
+      probability: 1.0

@@ -1,0 +1,10 @@
+name: PlaySquad
+version: '${version}'
+main: com.chyureu.playsquad.PlaySquad
+api-version: '1.20'
+prefix: PlaySquad
+authors: [애옹이]
+description: 스트리머들을 위한 플레이스쿼드 후원 연동 이벤트 플러그인
+website: reforged.kr
+commands:
+  리로드:

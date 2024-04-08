@@ -48,7 +48,6 @@ public class WebSocketEventClient {
                 @Override
                 public void onMessage(String message) {
                     // Handle incoming WebSocket message
-                    System.out.println("Received message: " + message);
                     handleWebSocketMessage(message);
                 }
 
@@ -79,7 +78,6 @@ public class WebSocketEventClient {
             // Prepare and send the heartbeat message
             String heartbeatMessage = "{\"eventType\":\"HEARTBEAT\",\"eventId\":\"" + token + "\"}";
             webSocketClient.send(heartbeatMessage);
-            System.out.println("HeartBeatMessage: " + heartbeatMessage);
             return;
         }
         // Close the WebSocket connection if it's not open

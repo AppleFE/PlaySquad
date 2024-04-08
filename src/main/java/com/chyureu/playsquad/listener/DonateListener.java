@@ -1,4 +1,4 @@
-package com.chyureu.playsquad.llistener;
+package com.chyureu.playsquad.listener;
 
 import com.chyureu.playsquad.PlaySquad;
 import com.chyureu.playsquad.api.DonationCommand;
@@ -19,11 +19,6 @@ public class DonateListener implements Listener {
     // Event handler for PlaySquadDonationEvent
     @EventHandler
     public void onDonate(PlaySquadDonationEvent event) {
-        System.out.println("Amount: " + event.getAmount());
-        System.out.println("EventID: " + event.getEventID());
-        System.out.println("GuestName: " + event.getGuestName());
-        System.out.println("SquadName: " + event.getSquadName());
-        System.out.println("clientMessage: " + event.getClientMessage());
         settingManager = SettingManager.getInstance(PlaySquad.getPlugin());
 
         // Get a random command based on the donation amount
@@ -34,7 +29,6 @@ public class DonateListener implements Listener {
 
         // Execute the command as console
         Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), command);
-        Bukkit.broadcastMessage("Command: " + command);
     }
 
     // Replace placeholders in the command string with actual values
@@ -91,7 +85,6 @@ public class DonateListener implements Listener {
     // Get a random command based on the donation amount's key and its associated probabilities
     private String getRandomCommand(String key) {
         List<DonationCommand> commands = settingManager.getDonationValue(key);
-        System.out.println(commands);
 
         Random random = new Random();
 

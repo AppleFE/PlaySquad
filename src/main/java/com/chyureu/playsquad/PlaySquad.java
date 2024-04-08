@@ -2,7 +2,7 @@ package com.chyureu.playsquad;
 
 import com.chyureu.playsquad.commands.ReloadCommand;
 import com.chyureu.playsquad.config.SettingManager;
-import com.chyureu.playsquad.llistener.DonateListener;
+import com.chyureu.playsquad.listener.DonateListener;
 import com.chyureu.playsquad.websocket.WebSocketEventClient;
 import org.bukkit.plugin.java.JavaPlugin;
 
